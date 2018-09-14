@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--head部分-->
+<head th:include="layout :: htmlhead" th:with="title='后台管理'">
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--头-->
+        <div th:replace="fragments/head :: header"></div>
+        <div class="layui-body">
+        
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>查看产品-部件-零件关系</legend>
+</fieldset>
+<table class="layui-table" lay-data="{url:'/getRelations', page:true, id:'test3'}" lay-filter="test3">
+  <thead>
+    <tr>
+      <th lay-data="{type:'checkbox'}">ID</th>
+      <th lay-data="{field:'id', width:100, sort: true}">ID</th>
+<th lay-data="{field:'momCinvaddcode', width:100, edit: 'text'}">母件存货代码</th>
+<th lay-data="{field:'momCpspcode', width:100, edit: 'text'}">母件编码</th>
+<th lay-data="{field:'momCinvname', width:100, edit: 'text'}">母件名称</th>
+<th lay-data="{field:'momCinvstd', width:100, edit: 'text'}">母件型号</th>
+<th lay-data="{field:'sonCinvaddcode', width:100, edit: 'text'}">子件存货代码</th>
+<th lay-data="{field:'sonCpscode', width:100, edit: 'text'}">子件编码</th>
+<th lay-data="{field:'sonCinvname', width:100, edit: 'text'}">子件名称</th>
+<th lay-data="{field:'sonCinvstd', width:100, edit: 'text'}">子件型号</th>
+<th lay-data="{field:'sonType', width:100, edit: 'text'}">子件是否为部件</th>
+<th lay-data="{field:'sonCcomunitname', width:100, edit: 'text'}">主计量单位</th>
+<th lay-data="{field:'sonTdqtyd', width:100, edit: 'text'}">基本用量分母</th>
+<th lay-data="{field:'sonIpsquantity', width:100, edit: 'text'}">基本用量分子</th>
+<th lay-data="{field:'sonSumquantity', width:100, edit: 'text'}">基本用量总量</th>
+    </tr>
+  </thead>
+</table>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  
+  //监听单元格编辑
+  table.on('edit(test3)', function(obj){
+    var value = obj.value //得到修改后的值
+    ,data = obj.data //得到所在行所有键值
+    ,field = obj.field; //得到字段
+    layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
+  });
+});
+</script>
+        </div>
+        <!--底部-->
+        <div th:replace="fragments/footer :: footer"></div>
+    </div>
+</body>
+</html>

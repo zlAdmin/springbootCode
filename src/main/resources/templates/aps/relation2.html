@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--head部分-->
+<head th:include="layout :: htmlhead" th:with="title='后台管理'">
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--头-->
+        <div th:replace="fragments/head :: header"></div>
+        <div class="layui-body">
+        
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>查看产品-部件-零件关系</legend>
+</fieldset>
+    <div class="layui-btn-group">
+        <button class="layui-btn" id="btn-newproduct">新增产品</button>
+        <button class="layui-btn" id="btn-import">导入产品关系</button>
+    </div>
+<table class="layui-table" id="test3" lay-filter="test3"></table>
+<script id="auth-state" type="text/text">
+
+<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+
+</script>
+<script type="text/html" id="titleTpl">
+  {{#  if(d.id == 1){ }}
+    <i class="layui-icon">10</i>
+  {{#  } else { }}
+    <i class="layui-icon"></i>
+  {{#  } }}
+</script>
+        </div>
+        <!--底部-->
+        <div th:replace="fragments/footer :: footer"></div>
+    <script src="/js/aps/relation2.js"></script>
+    </div>
+</body>
+</html>

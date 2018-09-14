@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>wencst-APStools</artifactId>
+  <packaging>jar</packaging>
+
+    <!-- 使用最新的spring-boot版本 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.2.RELEASE</version>
+  </parent>
+  <properties>
+    <!-- Generic properties -->
+    <java.version>9</java.version>
+  </properties>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.8.5.130:8081/repository/maven-public/</url>
+		</repository>
+	</repositories>
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+    </dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-jdbc</artifactId>
+	</dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <!-- 增加网页访问 -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+    <!-- Javax Annotation -->
+	<dependency>
+		<groupId>javax.annotation</groupId>
+		<artifactId>jsr250-api</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<!-- Java 6 = JAX-B Version 2.0   -->
+	<!-- Java 7 = JAX-B Version 2.2.3 -->
+	<!-- Java 8 = JAX-B Version 2.2.8 -->
+	<dependency>
+	    <groupId>javax.xml.bind</groupId>
+	    <artifactId>jaxb-api</artifactId>
+	    <!-- <version>2.2.3</version> -->
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>1.2.44</version>
+	</dependency>
+	
+	<!-- thymeleaf集成 -->
+   <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-thymeleaf</artifactId>
+   </dependency>
+  </dependencies>
+  
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>9</source>
+					<target>9</target>
+					<debug>true</debug>
+					<showWarnings>true</showWarnings>
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<verbose />
+						<bootclasspath>${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar</bootclasspath>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<plugin>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-maven-plugin</artifactId>
+			    <configuration>
+			        <layout>ZIP</layout>
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

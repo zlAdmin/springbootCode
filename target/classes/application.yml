@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    com.wencst.server.mybatis.dao: debug 
+    org.springframework.jdbc.support.incrementer: debug
+
+spring:
+  thymeleaf:
+    cache: false  #禁掉模板引擎的缓存
+#    prefix: classpath:/templates/  # 默认templates路径
+#    suffix: .html   # 默认后缀
+# jpa配置
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties.hibernate.hbm2ddl.auto: update
+      # 参数分为几种：
+      # 1. create 每次hibernate加载时，都会根据model类对数据库的表进行删除并新建，即使两次表结构是一模一样也会删除重建
+      # 2. create-drop 每次hibernate加载时根据model类生成表，但是sessionFactory一关闭，表就会自动删除
+      # 3. update 在第一次hibernate加载时，会根据model类建立表结构，以后加载hibernate时，会根据model类更新表结构，而且即使更新表结构，也会保留原有数据，但服务部署后不会立即更新表结构，要等第一次运行后才能更新
+      # 4. validate 每次加载hibernate时，验证创建数据库表结构，只会对表结构进行比较，不会创建新表，但会插入新数据
+#  datasource:
+#    url: jdbc:mysql://mysql_ip:3306/apstools?useSSL=false&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true
+#    driverClassName: com.mysql.jdbc.Driver
+#    username: root
+#    password: root
+  datasource:                           # 指定数据源
+    platform: h2                        # 指定数据源类型
+    schema: classpath:schema.sql        # 指定h2数据库的建表脚本
+    data: classpath:data.sql            # 指定h2数据库的insert脚本
+  h2:
+    console.path: /dbconsole
+    console.enabled: true
+  

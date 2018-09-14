@@ -1,0 +1,58 @@
+{
+	"msg": "",
+	"code": 0,
+	"count": 153,
+	"data": [
+		{
+			"momCinvaddcode": "",
+			"momCinvname": "产品",
+			"momCinvstd": "",
+			"momCpspcode": "0",
+			"sonCcomunitname": "个",
+			"sonCinvaddcode": "",
+			"sonCinvname": "简式磨床",
+			"sonCinvstd": "",
+			"sonCpscode": "90004200",
+			"sonIpsquantity": 1.00,
+			"sonSumquantity": 0.00,
+			"sonTdqtyd": 1,
+			"sonType": null,
+			"myid": 1,
+			"mypid": 0
+		},
+		{
+			"momCinvaddcode": "MJ7115",
+			"momCinvname": "简式磨床",
+			"momCinvstd": "MJ7115",
+			"momCpspcode": "90004200",
+			"sonCcomunitname": "个",
+			"sonCinvaddcode": "MJ7115.1",
+			"sonCinvname": "基座部分",
+			"sonCinvstd": "",
+			"sonCpscode": "80001101",
+			"sonIpsquantity": 1.00,
+			"sonSumquantity": 0.00,
+			"sonTdqtyd": 1,
+			"sonType": null,
+			"myid": 2,
+			"mypid": 1
+		},
+		{
+			"momCinvaddcode": "MJ7115",
+			"momCinvname": "简式磨床",
+			"momCinvstd": "MJ7115",
+			"momCpspcode": "90004200",
+			"sonCcomunitname": "个",
+			"sonCinvaddcode": "MJ7115.2",
+			"sonCinvname": "磨头部分",
+			"sonCinvstd": "",
+			"sonCpscode": "80001102",
+			"sonIpsquantity": 1.00,
+			"sonSumquantity": 0.00,
+			"sonTdqtyd": 1,
+			"sonType": null,
+			"myid": 3,
+			"mypid": 1
+		}
+	]
+}

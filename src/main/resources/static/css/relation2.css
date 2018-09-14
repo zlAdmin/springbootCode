@@ -1,0 +1,9 @@
+/** 未展开 */
+.treeTable-icon .layui-icon-triangle-d:before {
+    content: "\e623";
+}
+
+/** 展开 */
+.treeTable-icon.open .layui-icon-triangle-d:before {
+    content: "\e625";
+}
