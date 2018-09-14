@@ -1,2 +1,16 @@
 com\wencst\server\log\Log4JComponent.class
+com\wencst\server\aps\dao\BomBStockDao.class
+com\wencst\server\aps\model\BomStock.class
+com\wencst\server\aps\controller\IndexController.class
 com\wencst\ServerApplication.class
+com\wencst\server\aps\dao\PurchaseResultDao.class
+com\wencst\server\aps\dao\ProductPlanDao.class
+com\wencst\server\aps\dao\BomConfigDao.class
+com\wencst\server\aps\model\PurchaseResult.class
+com\wencst\server\aps\model\BomConfig.class
+com\wencst\server\aps\dao\BomStockDao.class
+com\wencst\server\aps\controller\DataController.class
+com\wencst\server\aps\dao\PurchasePlanDao.class
+com\wencst\server\aps\model\PurchasePlan.class
+com\wencst\server\aps\model\ProductPlan.class
+com\wencst\server\aps\model\BomBstock.class
