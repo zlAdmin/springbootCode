@@ -1,2 +1,2 @@
 # springbootCode
-springboot的一模本项目，有可用的前台文件
+springboot的一模版项目，有可用的前台文件
